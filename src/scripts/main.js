@@ -2,7 +2,7 @@
 
 const elements = [...document.getElementsByClassName('population')];
 
-const populations = elements.map(el => {
+const populations = elements.map((el) => {
   const text = el.textContent;
   const cleanText = text.replaceAll(',', '');
 
@@ -17,6 +17,6 @@ const totalElement = document.querySelector('.total-population');
 const averageElement = document.querySelector('.average-population');
 
 if (totalElement && averageElement) {
-  totalElement.textContent = `Total: ${totalPopulation.toLocaleString()}`;
-  averageElement.textContent = `Average: ${Math.round(averagePopulation).toLocaleString()}`;
+  totalElement.textContent = `${totalPopulation.toLocaleString()}`;
+  averageElement.textContent = `${Math.round(averagePopulation).toLocaleString()}`;
 }
